@@ -13,15 +13,18 @@ const holdBtn = document.querySelector('.btn--hold');
 
 
 // Starting Conditions
+
 score0El.textContent = 0;
 score1El.textContent = 0;
 //diceEl.style.display = "none";
 diceEl.classList.add('hidden');
 
 let currentScore = 0;
+let currentPlayer = 0;
 
 
 // Rolling dice functionality
+
 rollBtn.addEventListener('click', function () {
     // 1. Generate random dice roll
     const dice = Math.trunc(Math.random() * 6) + 1;
