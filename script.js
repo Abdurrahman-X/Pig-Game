@@ -55,3 +55,26 @@ rollBtn.addEventListener('click', function () {
         //current0El.textContent = 0;
     }
 })
+
+
+holdBtn.addEventListener('click', function() {
+    // 1. Add current score to current player's score
+    scoresArray[currentPlayer] += currentScore;
+    //console.log(currentScore);
+    document.getElementById(`score--${currentPlayer}`).textContent = scoresArray[currentPlayer]; 
+    if (currentScore >= 30) {
+        document.querySelector(`player--${currentPlayer}`).classList.add('player--winner');
+        document.querySelector(`player--${currentPlayer}`).classList.remove('player--active');
+
+    } else{
+        currentScore = 0;
+        document.getElementById(`current--${currentPlayer}`).textContent = 0;
+        currentPlayer = currentPlayer === 0 ? 1 : 0
+        player0El.classList.toggle('player--active');
+        player1El.classList.toggle('player--active');
+    }
+    
+    
+
+    
+})
