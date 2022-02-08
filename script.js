@@ -65,7 +65,7 @@ holdBtn.addEventListener('click', function() {
     console.log(currentScore);
 
     // 2. Check if score is >= 30
-    if (scoresArray[currentPlayer] >= 30) {
+    if (scoresArray[currentPlayer] >= 100) {
         document.querySelector(`.player--${currentPlayer}`).classList.add('player--winner');
         document.querySelector(`.player--${currentPlayer}`).classList.remove('player--active');
 
