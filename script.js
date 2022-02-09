@@ -64,7 +64,7 @@ rollBtn.addEventListener('click', function () {
     }
 })
 
-
+// Holding dice functionality
 holdBtn.addEventListener('click', function() {
     if (inPlay) {
        // 1. Add current score to current player's score
