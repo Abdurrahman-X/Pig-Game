@@ -16,6 +16,7 @@ const holdBtn = document.querySelector('.btn--hold');
 
 // Starting Conditions
 
+
 score0El.textContent = 0;
 score1El.textContent = 0;
 //diceEl.style.display = "none";
