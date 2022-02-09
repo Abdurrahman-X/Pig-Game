@@ -78,13 +78,29 @@ holdBtn.addEventListener('click', function() {
             // Finish the game
             document.querySelector(`.player--${currentPlayer}`).classList.add('player--winner');
             document.querySelector(`.player--${currentPlayer}`).classList.remove('player--active');
+            document.getElementById(`current--${currentPlayer}`).textContent = 0;
             inPlay = false;
             diceEl.classList.add('hidden');
         } else{
             // switch to the next player
             switchPlayer();
         } 
-    }
-    
-    
+    }  
+})
+
+// // Reset game
+newBtn.addEventListener('click', function () {
+    // 1. Hide the dice
+    diceEl.classList.add('hidden');
+    // 2. reset current score and total score
+    currentScore = 0;
+    document.querySelector(`.player--${currentPlayer}`).classList.remove('player--winner');
+    current0El.textContent = currentScore;
+    current1El.textContent = currentScore;
+    currentPlayer = 0;
+    scoresArray = [0,0];
+    score0El.textContent = 0;
+    score1El.textContent = 0;
+    player0El.classList.add('player--active');
+    inPlay = true;
 })
