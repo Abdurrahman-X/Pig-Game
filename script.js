@@ -73,8 +73,8 @@ holdBtn.addEventListener('click', function() {
         //console.log(currentScore);
         document.getElementById(`score--${currentPlayer}`).textContent = scoresArray[currentPlayer]; 
 
-        // 2. Check if score is >= 30
-        if (scoresArray[currentPlayer] >= 20) {
+        // 2. Check if score is >= 100
+        if (scoresArray[currentPlayer] >= 100) {
             // Finish the game
             document.querySelector(`.player--${currentPlayer}`).classList.add('player--winner');
             document.querySelector(`.player--${currentPlayer}`).classList.remove('player--active');
